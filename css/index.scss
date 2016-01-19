@@ -1,0 +1,41 @@
+@import "partial/_reset.scss";
+
+@charset "utf-8";
+.videoContainer{
+  article{
+    border-bottom: solid 4px #ffa5a5;
+    margin-bottom: 30px;
+    word-break: break-all;
+  }
+
+  .videoPlayer {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    iframe[src^='//www.youtube.com/embed'] {
+      background-image:url(../img/spinner.gif);
+      background-repeat:no-repeat;
+      background-position:center center;
+      background-size:64px 64px;
+    }
+  }
+}
+
+
+
+
+/* clearfix */
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
